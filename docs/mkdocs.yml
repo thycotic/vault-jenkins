@@ -1,0 +1,19 @@
+site_name: DevOps Secrets Vault Jenkins Plugin
+theme:
+  name: material
+  palette:
+    primary: light green
+    accent: light green
+  logo:
+    icon: 'security'
+markdown_extensions:
+  - markdown.extensions.admonition
+  - markdown.extensions.codehilite
+  - markdown_fenced_code_tabs:
+      single_block_as_tab: False
+      active_class: 'active'
+      template: 'default'
+
+extra_css:
+  - 'assets/css/code-tabs.css'
+  - 'assets/css/custom.css'
