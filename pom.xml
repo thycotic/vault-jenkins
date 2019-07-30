@@ -9,7 +9,7 @@
         <relativePath/>
     </parent>
     <groupId>com.thycotic</groupId>
-    <artifactId>devops-secrets-vault-jenkins</artifactId>
+    <artifactId>devops-secrets-vault</artifactId>
     <version>1.0.0</version>
     <packaging>hpi</packaging>
     <properties>
