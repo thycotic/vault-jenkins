@@ -9,8 +9,8 @@
         <relativePath/>
     </parent>
     <groupId>com.thycotic</groupId>
-    <artifactId>devops-secrets-vault-jenkins</artifactId>
-    <version>1.0-SNAPSHOT</version>
+    <artifactId>devops-secrets-vault</artifactId>
+    <version>1.0.0</version>
     <packaging>hpi</packaging>
     <properties>
         <jenkins.version>2.60.3</jenkins.version>
@@ -27,23 +27,22 @@
         </license>
     </licenses>
 
-    <!-- If you want this to appear on the wiki page:
-    <developers>
-      <developer>
-        <id>bhacker</id>
-        <name>Bob Q. Hacker</name>
-        <email>bhacker@nowhere.net</email>
-      </developer>
-    </developers> -->
 
-    <!-- Assuming you want to host on @jenkinsci:
-    <url>https://wiki.jenkins.io/display/JENKINS/TODO+Plugin</url>
+    <developers>
+        <developer>
+            <name>Thycotic</name>
+            <email>dsv@thycotic.com</email>
+            <organization>Thycotic</organization>
+            <organizationUrl>https://www.Thycotic.com</organizationUrl>
+        </developer>
+    </developers>
+
     <scm>
-        <connection>scm:git:git://github.com/jenkinsci/${project.artifactId}-plugin.git</connection>
-        <developerConnection>scm:git:git@github.com:jenkinsci/${project.artifactId}-plugin.git</developerConnection>
-        <url>https://github.com/jenkinsci/${project.artifactId}-plugin</url>
+        <connection>scm:git:git://github.com/thycotic/vault-jenkins.git</connection>
+        <developerConnection>scm:git@github.com:thycotic/vault-jenkins.git</developerConnection>
+        <url>https://github.com/thycotic/vault-jenkins</url>
     </scm>
-    -->
+
     <dependencies>
         <dependency>
             <groupId>org.jenkins-ci.plugins</groupId>
@@ -80,7 +79,7 @@
         <dependency>
             <groupId>com.thycotic</groupId>
             <artifactId>devops-secrets-vault-sdk</artifactId>
-            <version>1.0-SNAPSHOT</version>
+            <version>1.0.0</version>
         </dependency>
         <dependency>
             <groupId>org.assertj</groupId>
@@ -144,28 +143,7 @@
             </exclusions>
         </dependency>
     </dependencies>
-    <repositories>
-        <repository>
-            <id>repo.jenkins-ci.org</id>
-            <url>https://repo.jenkins-ci.org/public/</url>
-        </repository>
-        <repository>
-            <id>thycotic-visualstudio-com-thycotic-bambe</id>
-            <url>https://thycotic.pkgs.visualstudio.com/_packaging/Bambe/maven/v1</url>
-            <releases>
-                <enabled>true</enabled>
-            </releases>
-            <snapshots>
-                <enabled>true</enabled>
-            </snapshots>
-        </repository>
-    </repositories>
-    <distributionManagement>
-        <repository>
-            <id>thycotic-visualstudio-com-thycotic-bambe</id>
-            <url>https://thycotic.pkgs.visualstudio.com/_packaging/Bambe/maven/v1</url>
-        </repository>
-    </distributionManagement>
+
     <pluginRepositories>
         <pluginRepository>
             <id>repo.jenkins-ci.org</id>
@@ -217,6 +195,25 @@
                     </execution>
                 </executions>
             </plugin>
+            <!-- Attach javadocs jar -->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-javadoc-plugin</artifactId>
+                <version>3.1.0</version>
+                <configuration>
+                    <use>false</use>
+                    <source>1.8</source>
+                </configuration>
+                <executions>
+                    <execution>
+                        <id>attach-javadocs</id>
+                        <goals>
+                            <goal>jar</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+
         </plugins>
     </build>
     <reporting>
