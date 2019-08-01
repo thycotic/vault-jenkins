@@ -1,4 +1,0 @@
-mkdocs==1.0.4
-mkdocs-material==3.2.0
-pygments==2.3.1
-markdown-fenced-code-tabs==1.0.5
