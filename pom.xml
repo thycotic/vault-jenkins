@@ -9,7 +9,7 @@
         <relativePath/>
     </parent>
     <groupId>com.thycotic</groupId>
-    <artifactId>devops-secrets-vault</artifactId>
+    <artifactId>thycotic-vault</artifactId>
     <version>1.0.0</version>
     <packaging>hpi</packaging>
     <properties>
@@ -19,14 +19,13 @@
     </properties>
     <name>Thycotic DevOps Secrets Vault Plugin</name>
     <description>Plugin to access secrets from Thycotic DevOps Secrets Vault</description>
-    <!-- The default licence for Jenkins OSS Plugins is MIT. Substitute for the applicable one if needed. -->
+
     <licenses>
         <license>
             <name>MIT License</name>
             <url>https://opensource.org/licenses/MIT</url>
         </license>
     </licenses>
-
 
     <developers>
         <developer>
