@@ -1,3 +1,6 @@
+# NOTE
+This repository is archived and will be deleted. All changes should be made from the hosted jenkinsci fork: https://github.com/jenkinsci/thycotic-vault-plugin
+
 # DevOps Secrets Vault Jenkins Plugin
 This plugin allows access to the Thycotic Vault API to access secrets used in the build process.
 Use of the is plugin must be associated with a licensed version of the Thycotic Vault.
